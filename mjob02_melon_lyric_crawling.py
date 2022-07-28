@@ -50,11 +50,14 @@ time.sleep(1)
 # div = driver.find_element("css selector", "#btnLogin").click()
 # sleep(rand_value)
 
+artist = []
+song_title = []
 lyric2 = []
+
 
 #가수 id의 시작 값과 끝 값
 start = 9
-end = 707686
+end = 92
 
 for i in range(start,end):
     # rand_value = randint(1, MAX_SLEEP_TIME)
@@ -96,6 +99,8 @@ for i in range(start,end):
                 lyric = lyric.text.replace("\n", " ")
                 print(lyric)
                 lyric2.append(lyric)
+                song_title.append(songName[i])
+                artist.append(singerName[i])
 
             #가사 펼치기 버튼 없으면 없으면 패스
             except:
@@ -146,6 +151,8 @@ for i in range(start,end):
                     lyric = lyric.text.replace("\n", " ")
                     print(lyric)
                     lyric2.append(lyric)
+                    song_title.append(songName[i])
+                    artist.append(singerName[i])
 
                 # 가사 펼치기 버튼 없으면 없으면 패스
                 except:
@@ -160,15 +167,12 @@ for i in range(start,end):
             print('debug03')
 
         except:
-            lyric = '검색실패'
-            lyric2.append(lyric)
+            pass
             time.sleep(1)
 
     print('debug04')
     time.sleep(1)
     driver.find_element("css selector", "#top_search").clear()
 
-data1 = data.drop(data.index[:36765], axis=0)
-data1 = data1.drop(data.index[41801:], axis=0)
-data1['lyric'] = lyric2
-data1.to_csv('test01.csv', index=False)
+df = pd.DataFrame({'artist': artist, 'title': song_title, 'lyric':lyric2})
+df.to_csv('./test01.csv', index=False)
