@@ -9,16 +9,17 @@ import pandas as pd
 from random import randint
 
 
-data = pd.read_csv('./melon_data/RandM.csv', index_col=0)
+data = pd.read_csv('./melon_data/Religion2300.csv', index_col=False)
+# data.info()
 
 # ---- 'artist_name_basket'의 []대괄호를 ' ' 띄어쓰기로 trans ----
 songName = data['song_name']
 singerName = data['artist_name_basket']    
 trs = str.maketrans("['']", '    ')
 for i in tqdm(range(singerName.size)):
-    a = data.iloc[i,8].translate(trs)
+    a = data.iloc[i,7].translate(trs)
     a.replace('  ','')
-    data.iloc[i,8] = a
+    data.iloc[i,7] = a
 print(songName[:11]+singerName[:11])
 # exit()
 
@@ -56,9 +57,9 @@ sleep(rand_value)
 artist = []
 song_title = []
 lyric2 = []
-# ---- data 파일의 [0]번째 컬럼 시작/끝 숫자 ----
-start = 39
-end = 706929
+# ---- data 파일의 행 개수 ----
+start = 0
+end = 50
 
 
 for i in range(start,end):
@@ -182,4 +183,4 @@ for i in range(start,end):
 
 # ---- DataFrame 형태로 저장 ----
 df = pd.DataFrame({'artist': artist, 'title': song_title, 'lyric':lyric2})
-df.to_csv('./RandM_lyrics.csv', index=False)
+df.to_csv('./melon_lyric_data/Religion_lyrics_{}_{}.csv'.format(start, end), index=False)
