@@ -9,7 +9,7 @@ import pandas as pd
 from random import randint
 
 
-data = pd.read_csv('./melon_data/Religion2300.csv', index_col=False)
+data = pd.read_csv('./melon_data/Adultpop0700.csv', index_col=False)
 # data.info()
 
 # ---- 'artist_name_basket'의 []대괄호를 ' ' 띄어쓰기로 trans ----
@@ -23,9 +23,18 @@ for i in tqdm(range(singerName.size)):
 print(songName[:11]+singerName[:11])
 # exit()
 
+#
+# MAX_SLEEP_TIME=3
+# rand_value = randint(1, MAX_SLEEP_TIME)
 
-MAX_SLEEP_TIME=3
-rand_value = randint(1, MAX_SLEEP_TIME)
+#---- 크롤링 사이트 차단 해제 ----
+options = wb.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+driver = wb.Chrome(options=options)
+driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
+driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+
 
 # ---- selenium chrome web driver options ----
 options = wb.ChromeOptions()
@@ -40,31 +49,32 @@ driver.get("https://www.melon.com/")
 time.sleep(1)
 
 # ---- 멜론 로그인 ----
-sleep(rand_value)
-div = driver.find_element("css selector", "#gnbLoginDiv > div > button > span").click()
-sleep(rand_value)
-div = driver.find_element("css selector", "#conts_section > div > div > div:nth-child(3) > button").click()
-sleep(rand_value)
-
-driver.find_element("css selector", "#id").send_keys('0620julie')  #input your melon id
-driver.find_element("css selector", "#pwd").send_keys('dlgusrud1128!')  #input your melon pw
-sleep(rand_value)
-div = driver.find_element("css selector", "#btnLogin").click()
-sleep(rand_value)
+# sleep(rand_value)
+# div = driver.find_element("css selector", "#gnbLoginDiv > div > button > span").click()
+# sleep(rand_value)
+# div = driver.find_element("css selector", "#conts_section > div > div > div:nth-child(3) > button").click()
+# sleep(rand_value)
+#
+# driver.find_element("css selector", "#id").send_keys('0620julie')  #input your melon id
+# driver.find_element("css selector", "#pwd").send_keys('dlgusrud1128!')  #input your melon pw
+# sleep(rand_value)
+# div = driver.find_element("css selector", "#btnLogin").click()
+# sleep(rand_value)
 
 
 # ---- ---- ---- ---- ---- ---- ---- ----
 artist = []
 song_title = []
 lyric2 = []
+cnt = 0
 # ---- data 파일의 행 개수 ----
-start = 0
-end = 50
+start = 51
+end = 63
 
 
 for i in range(start,end):
-    rand_value = randint(1, MAX_SLEEP_TIME)
-    time.sleep(3)
+    # rand_value = randint(1, MAX_SLEEP_TIME)
+    time.sleep(5)
 
     if i == start:
         # ---- 검색창에 '노래제목, 가수이름' 검색 ----
@@ -106,6 +116,9 @@ for i in range(start,end):
                 lyric2.append(lyric)
                 song_title.append(songName[i])
                 artist.append(singerName[i])
+
+                cnt += 1
+                print(cnt)
 
             except:
                 # ---- '펼치기' 버튼 없으면 패스 ----
@@ -158,6 +171,9 @@ for i in range(start,end):
                     song_title.append(songName[i])
                     artist.append(singerName[i])
 
+                    cnt += 1
+                    print(cnt)
+
                 except:
                     # ---- '펼치기' 버튼 없으면 패스 ----
                     pass
@@ -183,4 +199,4 @@ for i in range(start,end):
 
 # ---- DataFrame 형태로 저장 ----
 df = pd.DataFrame({'artist': artist, 'title': song_title, 'lyric':lyric2})
-df.to_csv('./melon_lyric_data/Religion_lyrics_{}_{}.csv'.format(start, end), index=False)
+df.to_csv('./melon_lyric_data/Adultpop_lyrics_{}_{}.csv'.format(start, end), index=False)
