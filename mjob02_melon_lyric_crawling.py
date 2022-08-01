@@ -9,8 +9,8 @@ import pandas as pd
 from random import randint
 
 
-data = pd.read_csv('./melon_data/RandB_S.csv', index_col=False)
-data.info()
+data = pd.read_csv('./melon_data/Adultpop0700.csv', index_col=False)
+# data.info()
 
 # ---- 'artist_name_basket'의 []대괄호를 ' ' 띄어쓰기로 trans ----
 songName = data['song_name']
@@ -68,27 +68,27 @@ song_title = []
 lyric2 = []
 cnt = 0
 # ---- data 파일의 행 개수 ----
-start = 1500
-end = 1600
+start = 51
+end = 63
 
 
 for i in range(start,end):
     # rand_value = randint(1, MAX_SLEEP_TIME)
-    time.sleep(3)
+    time.sleep(5)
 
     if i == start:
         # ---- 검색창에 '노래제목, 가수이름' 검색 ----
         driver.find_element("css selector", "#top_search").send_keys(songName[i]+', '+singerName[i])
-        time.sleep(3)
+        time.sleep(1)
         # ---- 검색 버튼 클릭 ----
         div = driver.find_element("css selector", "#gnb > fieldset > button.btn_icon.search_m > span").click()
-        time.sleep(2)
+        time.sleep(1)
         print(songName[i]+', '+singerName[i], "01")
 
         try:
             # ---- 노래 가사 보기 버튼 클릭 ----
             driver.find_element("css selector", '#frm_songList > div > table > tbody > tr:nth-child(1) > td:nth-child(3) > div > div > a.btn.btn_icon_detail').click()
-            time.sleep(2)
+            time.sleep(1)
 
             # ---- 스크롤 컨트롤 ----
             # -- 스크롤 높이 가져오기 --
@@ -96,7 +96,7 @@ for i in range(start,end):
             while True:
                 # -- 끝까지 스크롤 다운 --
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                time.sleep(3)
+                time.sleep(1)
                 # -- 스크롤 다운 후 스크롤 높이 다시 가져오기 --
                 new_height = driver.execute_script("return document.body.scrollHeight")
                 if new_height == last_height:
@@ -108,7 +108,7 @@ for i in range(start,end):
             try:
                 # ---- '펼치기' 버튼 클릭 ----
                 driver.find_element("css selector", '#lyricArea > button').click()
-                time.sleep(2)
+                sleep(1)
                 # ---- 가사 내용 크롤링 / 줄바꿈 형태는 띄어쓰기로 바꾸기 ----
                 lyric = driver.find_element("css selector", '#d_video_summary')
                 lyric = lyric.text.replace("\n", " ")
@@ -136,22 +136,22 @@ for i in range(start,end):
         try:
             # ---- 검색창에 '노래제목, 가수이름' 검색 ----
             driver.find_element("css selector", "#top_search").send_keys(songName[i] + ', ' + singerName[i])
-            time.sleep(3)
+            time.sleep(1)
             # ---- 검색 버튼 클릭 ----
             div = driver.find_element("css selector", "#header_wrap > div.wrap_search_field > fieldset > button.btn_icon.search_m > span").click()
-            time.sleep(2)
-            print(songName[i] + ', ' + singerName[i])
+            time.sleep(1)
+            print(songName[i] + ', ' + singerName[i], "02")
 
             try:
                 # ---- 노래 가사 보기 버튼 클릭 ----
                 driver.find_element("css selector", '#frm_songList > div > table > tbody > tr:nth-child(1) > td:nth-child(3) > div > div > a.btn.btn_icon_detail').click()
-                time.sleep(2)
+                time.sleep(1)
 
                 # ---- 스크롤 컨트롤 ----
                 last_height = driver.execute_script("return document.body.scrollHeight")
                 while True:
                     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                    time.sleep(3)
+                    time.sleep(1)
                     new_height = driver.execute_script("return document.body.scrollHeight")
                     if new_height == last_height:
                         break
@@ -162,7 +162,7 @@ for i in range(start,end):
                 try:
                     # ---- '펼치기' 버튼 클릭 ----
                     driver.find_element("css selector", '#lyricArea > button').click()
-                    time.sleep(2)
+                    sleep(1)
                     # ---- 가사 내용 크롤링 / 줄바꿈 형태는 띄어쓰기로 바꾸기 ----
                     lyric = driver.find_element("css selector", '#d_video_summary')
                     lyric = lyric.text.replace("\n", " ")
@@ -199,4 +199,4 @@ for i in range(start,end):
 
 # ---- DataFrame 형태로 저장 ----
 df = pd.DataFrame({'artist': artist, 'title': song_title, 'lyric':lyric2})
-df.to_csv('./RandB_S_lyrics_{}_{}_cnt_{}.csv'.format(start, end, cnt), index=False)
+df.to_csv('./melon_lyric_data/Adultpop_lyrics_{}_{}.csv'.format(start, end), index=False)
