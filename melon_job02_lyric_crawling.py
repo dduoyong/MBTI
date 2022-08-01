@@ -9,7 +9,7 @@ import pandas as pd
 from random import randint
 
 
-data = pd.read_csv('./melon_data/Adultpop0700.csv', index_col=False)
+data = pd.read_csv('melon/01_melon_gn_classification_data/Adultpop0700.csv', index_col=False)
 # data.info()
 
 # ---- 'artist_name_basket'의 []대괄호를 ' ' 띄어쓰기로 trans ----
