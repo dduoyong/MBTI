@@ -6,7 +6,7 @@ music_genre_lst = ['Adultpop', 'Ballad', 'Classic', 'Dance', 'FandB', 'Idol', 'I
 
 for i in music_genre_lst:
 
-    data_paths = glob.glob('02_melon_lyric_crawling_data/{}/*'.format(i))
+    data_paths = glob.glob('melon_lyrics_crawling_data/{}/*'.format(i))
     df = pd.DataFrame()
     df.info()
 
@@ -26,6 +26,6 @@ for i in music_genre_lst:
     df.drop_duplicates(inplace=True)
     df.info()
 
-    df.to_csv('./03_melon_lyric_concat_data/crawling_data.lyrics_{}.csv'.format(i), index = False)
+    df.to_csv('./concat_lyrics_crawling_data/crawling_data.lyrics_{}.csv'.format(i), index = False)
 
 # df.to_csv('./melon_lyric_data/reviews_2017_2022.csv', index = False)
