@@ -1,7 +1,7 @@
 artist,title,English_clean_lyric
   현철  ,사랑의 이름표,
   서주경  ,똑똑똑,
-  이은하  ,버스정류장,hey bus stop hey hey hey hey hey hey hey hey hey bus stop bus bus bus bus bus bus bus bus stop stop stop stop stop stop stop stop
+  이은하  ,버스정류장,bus stop bus stop bus bus bus bus bus bus bus bus stop stop stop stop stop stop stop stop
   김수희  ,빗물,
   조용필  ,산유화,
   장윤정  ,그날,
@@ -40,7 +40,7 @@ artist,title,English_clean_lyric
   현철  ,사랑이 불로초,
   정수라  ,어부의 딸,
   임성훈  ,후끈 후끈,
-  패티김  ,샤레이드,charade child playing game part hit bill love masquerade fate string wing music box serenade song heart bill charade play pose act guess play make come close leave seem pull turn go darken play compose best like next sad little names best still always
+  패티김  ,샤레이드,charade child playing game part hit bill love masquerade fate string wing music box serenade song heart bill charade play pose act guess play make come close leave seem pull turn darken play compose best like next sad little names best still always
   임주리  ,사랑한 후에,
   노사연  ,돌고 돌아가는 길,
   남인수  ,울며 헤진 부산항(釜山港),
@@ -103,7 +103,7 @@ artist,title,English_clean_lyric
   진송남  ,역에선 가로등,
   박민혁  ,호들갑,
   장윤정  ,가슴으로 울었네,
-  권도운  ,너만을 느끼며 (Duet With 정연수),love love love love oh
+  권도운  ,너만을 느끼며 (Duet With 정연수),love love love love
   윤희상  ,카스바의 여인,
   트롯걸스  ,홍시 (울엄마) (여자 Ver.),
   이애리수  ,황성(荒城)의 적(跡),
@@ -212,7 +212,7 @@ artist,title,English_clean_lyric
   이은하  ,겨울장미,
   나훈아  ,과거를 묻지 마세요,
   이순정  ,찰떡,
-  조용필  ,일성(一聲),tv
+  조용필  ,일성(一聲),
   주병선  ,아리아리요,
   빛나래  ,잊어요,
   송은유  ,더럽게 신나는 트로트 (Feat. 이태검),
@@ -238,7 +238,7 @@ artist,title,English_clean_lyric
   정의송  ,미련,
   우연이  ,몰랐네,
   금잔디  ,어쩔사 (어쩔 수 없는 사랑),
-  박윤경  ,Victory 평창 (Feat. 김수찬),victory victory victory victory victory let victory victory victory victory victory victory victory let go go go go go go go go let go korea korea victory korea victory victory
+  박윤경  ,Victory 평창 (Feat. 김수찬),victory victory victory victory victory let victory victory victory victory victory victory victory let let korea korea victory korea victory victory
   설운도  ,다함께 차차차,
   트로트 공장  ,내 나이가 어때서,
   김혜연  ,간큰남자,
@@ -260,7 +260,7 @@ artist,title,English_clean_lyric
   이용  ,사랑과 행복 그리고 이별,
   신웅  ,무효,
   하동진  ,애인이 돼 주세요,
-  손소연  ,서울에서 부산까지 (Feat. 개그맨 김준현),love ok oh oh oh oh let go ok ok oh ok oh ok oh ok oh
+  손소연  ,서울에서 부산까지 (Feat. 개그맨 김준현),love let
   작은 거인  ,일곱색깔 무지개,
   이미자  ,기러기 아빠,
   명국환  ,거리의 악사,
@@ -302,7 +302,7 @@ artist,title,English_clean_lyric
   조용필  ,황성옛터,
   허승자  ,인생열차,
   강진  ,남자의 눈물,
-  패티김  ,진주 조개잡이,ry grain sand beach kiss star shell ocean sun shore heart shell shell get get shin cover ev left blue pearly little pearly little pearly
+  패티김  ,진주 조개잡이,grain sand beach kiss star shell ocean sun shore heart shell shell get get shin cover left blue pearly little pearly little pearly
   박단마  ,슈샤인보이,
   김지애  ,얄미운 사람,
   예스박  ,영일만 친구,
@@ -634,7 +634,7 @@ artist,title,English_clean_lyric
   전승희  ,뜬 기분 (DJ처리 Remix Ver.),
   공소원  ,불어라 사랑아,
   임희숙  ,잊혀진 여인,
-  정미애  ,라밤바,la bamba feel feel feel la
+  정미애  ,라밤바,bamba feel feel feel
   김용임  ,거문고 사랑,
   나훈아  ,갈무리,
   조용필  ,"어제, 오늘 그리고",
@@ -647,7 +647,7 @@ artist,title,English_clean_lyric
   나미  ,당신의 모든 것이 다 좋아요,xxx
   문희옥  ,하늘 땅만큼,
   유익종  ,상처,
-  Various Artists  ,Sanfrancisco,flower hair francisco people summertime love street people flower hair nation vibration people motion generation explanation people motion people motion flower hair summertime love summertime love go san wear go san gon meet san san wear san san francisco sure gentle francisco san francisco gentle strange whole new francisco sure francisco francisco
+  Various Artists  ,Sanfrancisco,flower hair francisco people summertime love street people flower hair nation vibration people motion generation explanation people motion people motion flower hair summertime love summertime love san wear san meet san san wear san san francisco sure gentle francisco san francisco gentle strange whole new francisco sure francisco francisco
   김추자  ,거짓말이야,
   박일남  ,검은 장갑,
   이박사  ,무조건,
@@ -673,7 +673,7 @@ artist,title,English_clean_lyric
   이종박  ,베어스 짱!,
   핫해하태 하태수  ,흥보가 기가 막혀,
   김희재  ,사랑은 어디에,
-  펄 시스터즈  ,비,la pioggia la pioggia
+  펄 시스터즈  ,비,pioggia pioggia
   설운도  ,나만의 여인,
   천명훈  ,가라지,
   최정자  ,희망가,
@@ -685,7 +685,7 @@ artist,title,English_clean_lyric
   김학래  ,내가,
   정미애  ,수은등,
   정훈희  ,그 사람 바보야,
-  패티김  ,하얀 집 (Casabianca),casabianca casabianca tuttibimbi hanno qualchecosa che didolor li fa tremare sanno che casabianca casabianca non
+  패티김  ,하얀 집 (Casabianca),casabianca casabianca tuttibimbi hanno qualchecosa che didolor tremare sanno che casabianca casabianca non
 "  주현미 ,  김준규  ",용두산 엘레지,
   하춘화  ,물새한마리,
   이애란  ,황혼이 미워,
@@ -728,7 +728,7 @@ artist,title,English_clean_lyric
   이동녘  ,오줌꽃,
   장계현  ,Time,look life world time need bridge head tender body whisper raindrop window time time word tomorrow time sadness head tender body whisper raindrop window time time keep turn spend watch burn lay hold mine blow make get find find need say lay hold mine blow make sad old let glad pillow warm close soft good enough pillow warm close soft good together ever forever
   김용임  ,모르나봐,
-  김상국  ,성자의 행진,saint oh saint number saint saint rock roll saint rock roll baby number saint rock roll march march march go go go
+  김상국  ,성자의 행진,saint saint number saint saint rock roll saint rock roll baby number saint rock roll march march march
   지원이  ,안동역에서,
   강달님  ,댄서의 순정,
   이미자  ,엘레지의 여왕,
@@ -767,7 +767,7 @@ artist,title,English_clean_lyric
 "  최영주 ,  나현재  ",선생님,
   양희은  ,물새우는 강언덕,
   진성  ,보릿고개,
-  오로라  ,따따블 (Dance Ver.),ye ye ye ye ye ye ye ye ye
+  오로라  ,따따블 (Dance Ver.),
   나영이  ,마지막 여자,
   연분홍  ,못생기게 만들어주세요,
   김서영  ,오빠 힘내!,
@@ -1009,7 +1009,7 @@ artist,title,English_clean_lyric
   배호  ,나그네 옛 성터,
   박성훈  ,돌아가,
   이금희  ,날씬한 아가씨끼리,
-  패티김  ,티파니에서 아침을,moon river mile style day dream maker heart breaker way drifter world lot world rainbow end bend huckleberry moon river rainbow end bend huckleberry moon river cross go go see see wait round wait round wide oh
+  패티김  ,티파니에서 아침을,moon river mile style day dream maker heart breaker way drifter world lot world rainbow end bend huckleberry moon river rainbow end bend huckleberry moon river cross see see wait round wait round wide
   이선희  ,알고 싶어요,
   김미화  ,대박이야,
   김용림  ,먼데서 오신 손님,
@@ -1029,7 +1029,7 @@ artist,title,English_clean_lyric
   하태웅  ,사랑아 (Dance Ver.),
   김수희  ,잃어버린 정,
   장윤정  ,너 떠난후에,
-  이경미  ,사랑은 개나소나 (Full Ver.),la
+  이경미  ,사랑은 개나소나 (Full Ver.),
   장윤정  ,블란서 영화처럼,
   나훈아  ,모정의 세월,
   정탁  ,가슴에 흐르는 눈물,
@@ -1092,7 +1092,7 @@ artist,title,English_clean_lyric
   홍진영  ,사랑의 배터리,
   문희옥  ,정말 좋았네,
   유화  ,소낙비 사랑,
-  정호  ,우리 이모 (주인 Ver.),go go
+  정호  ,우리 이모 (주인 Ver.),
   박현빈  ,오빠만 믿어 (Remix),
   최진희  ,사랑과 이별,
   현당  ,사랑의 그리움,
