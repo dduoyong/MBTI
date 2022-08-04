@@ -65,31 +65,32 @@ for i in range(6, 7):
         # print('표제어 추출 전 :', token_words)
         # print('표제어 추출 후 :', [lemmatizer.lemmatize(word) for word in df_verb['word']])
 
+        a = [lemmatizer.lemmatize(w, pos='n') for w in df_noun['word']]
+        b = [lemmatizer.lemmatize(w, pos='v') for w in df_verb['word']]
+        c = [lemmatizer.lemmatize(w, pos='a') for w in df_adjective['word']]
+        d = [lemmatizer.lemmatize(w, pos='r') for w in df_adverb['word']]
+
         print([lemmatizer.lemmatize(w, pos='n') for w in df_noun['word']])   #명사
         print([lemmatizer.lemmatize(w, pos='v') for w in df_verb['word']])    #동사
         print([lemmatizer.lemmatize(w, pos='a') for w in df_adjective['word']])   #형용사
         print([lemmatizer.lemmatize(w, pos='r') for w in df_adverb['word']])   #부사
         # exit()
 
-
+        lemmatizer_token = a + b + c+ d
         # -- nltk stopwords & 불용어 제거 --
         stop_words = set(stopwords.words('english'))
 
-
-        result = []
-        for token in token_words:
-            if token not in stop_words:
-                result.append(token)
-
-        # print(token_words)
-        # print(result)
-
-        lemm = WordNetLemmatizer()
-        # for word in token_words:
-        # print([lemm.lemmatize(word, pos='v') for word in token_words])
-
+        # stop_words_list = stopwords.words('english')
+        # print('불용어 개수 :', len(stop_words_list))
+        # print('불용어 출력 :', stop_words_list)
         # exit()
 
+
+        result = []
+        for token in lemmatizer_token:
+            if len(token) > 1:
+                if token not in stop_words:
+                    result.append(token)
 
         cleaned_sentence = ' '.join(result)
         English_lyric.append(cleaned_sentence)
